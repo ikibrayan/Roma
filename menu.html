@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menú</title>
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- HEADER -->
+  <div class="cart-header">
+    <a href="./select.html" class="back-button">←</a>
+    <h2>MENÚ</h2>
+  </div>
+
+
+  <!-- BARRA DE ANUNCIOS -->
+  <div class="anuncio-bar">
+    <p>
+      Por la compra superior de 10 camisas llevalas a precio mayorista ✨  
+      
+    </p>
+  </div>
+
+
+  <!-- CATEGORÍAS -->
+  <div class="categorias-container">
+    <button class="categoria-btn" onclick="filtrarBotonCategoria(this, 'camisa')">
+      <img src="./img/camisa.png" alt="Chicken" />
+      <!-- <span>Zapatos</span> -->
+    </button>
+    <button class="categoria-btn" onclick="filtrarBotonCategoria(this, 'camisa-cuadros')">
+      <img src="./img/camisa-de-cuadros.png"/>
+      <!-- <span>Jeans</span> -->
+    </button>
+    <button class="categoria-btn" onclick="filtrarBotonCategoria(this, '')">
+      <img src="./img/camisa-manga-larga.png"/>
+      <!-- <span>Chaqueta</span> -->
+    </button>
+    <button class="categoria-btn" onclick="filtrarBotonCategoria(this, 'camisa-lineas')">
+      <img src="./img/camisa-tres-rayas.png" alt="Chicken" />
+      <!-- <span>Zapatos</span> -->
+    </button>
+    <button class="categoria-btn" onclick="filtrarBotonCategoria(this, '')">
+      <img src="./img/camisa-con-bolsillo.png" />
+      <!-- <span>Camisa con bolsillo</span> -->
+    </button>
+  </div>
+
+  <!-- Productos dinámicos -->
+  <div class="cart-items"></div>
+
+  <!-- FOOTER -->
+  <div class="cart-footer">
+    <span id="total-price">$0</span>
+    <button class="pay">Realizar Pedido <i class="fa-brands fa-whatsapp"></i></button>
+  </div>
+
+  <script src="./js/menu.js"></script>
+</body>
+</html>
