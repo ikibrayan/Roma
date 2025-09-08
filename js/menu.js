@@ -3,43 +3,43 @@ const productos = [
 
   {
     categoria: 'camisa',
-    nombre: 'Camisa Negra Mujer',
+    nombre: 'Camisa Beige Niño',
     precio: 52000,
-    descripcion: 'Camisa elegante de color negro para ocasiones especiales.',
+    descripcion: 'Camisa casual de color beige para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/camisa-beige.jpeg'
   },
 
   {
     categoria: 'camisa-lineas',
-    nombre: 'Camisa Negra Mujer',
+    nombre: 'Camisa Blanca con Líneas Negras Niño',
     precio: 52000,
-    descripcion: 'Camisa elegante de color negro para ocasiones especiales.',
+    descripcion: 'Camisa blanca con estampado de líneas negras para niño, perfecta para un estilo moderno y fresco.',
     imagen: 'img/productos/camisa-blanca-lineas-negras.jpeg'
   },
   
   {
     categoria: 'camisa',
-    nombre: 'Camisa Negra Mujer',
+    nombre: 'Camisa Blanca Niño',
     precio: 52000,
-    descripcion: 'Camisa elegante de color negro para ocasiones especiales.',
+    descripcion: 'Camisa elegante de color blanco para niño, ideal para ocasiones formales y casuales.',
     imagen: 'img/productos/camisa-blanca.jpeg'
   },
 
   {
     categoria: 'camisa-cuadros',
-    nombre: 'Camisa Negra Mujer',
+    nombre: 'Camisa Café a Cuadros Niño',
     precio: 52000,
-    descripcion: 'Camisa elegante de color negro para ocasiones especiales.',
+    descripcion: 'Camisa a cuadros en tonos café para niño, perfecta para un look relajado.',
     imagen: 'img/productos/camisa-cafe.jpeg'
   },
 
   {
     categoria: 'camisa',
-    nombre: 'Camisa Negra Mujer',
+    nombre: 'Camisa Verde Niño',
     precio: 52000,
-    descripcion: 'Camisa elegante de color negro para ocasiones especiales.',
+    descripcion: 'Camisa de color verde para niño, cómoda y versátil para cualquier ocasión.',
     imagen: 'img/productos/camisa-verde.jpeg'
-  },
+  }
 
   // {
   //   categoria: 'camisa',
