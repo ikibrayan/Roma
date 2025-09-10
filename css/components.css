@@ -39,13 +39,14 @@ body {
 
 /*Anuncios*/
 .anuncio-bar {
-  background-color: #085766;  /* color de fondo */
+  background-color: #61AEBF ;  /* color de fondo */
   color: white;               /* color de texto */
   padding: 5px 10px;
   font-size: 0.9em;
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
+  height: 40px;
 }
 
 .anuncio-bar p {
@@ -58,6 +59,56 @@ body {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
+
+/*Modal*/
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+}
+
+.talla-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0;
+  gap: 10px;
+}
+
+.talla-control span {
+  min-width: 20px;
+  text-align: center;
+}
+
+.talla-control button {
+  border: 1px solid #333;
+  background: #eee;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.close-btn{
+  background-color: red;
+  border-radius: 10px;
+  border-color: red;
+  padding: 6px 12px;
+  margin-top: 5px;
+  color: white;
+}
+
+
 
 
 /* Categorías */
@@ -124,7 +175,7 @@ body {
 
 /* Activo */
 .categoria-btn.active {
-  background-color: #085766;
+  background-color: #61AEBF ;
  
   box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
   transform: scale(1.05);
@@ -192,7 +243,7 @@ body {
 .talla-select {
   padding: 6px 10px;
   margin-top: 6px;
-  border: 2px solid #085766;   /* verde similar al botón de + */
+  border: 2px solid #61AEBF ;   /* verde similar al botón de + */
   border-radius: 8px;
   background-color: #fff;
   font-size: 14px;
@@ -206,16 +257,17 @@ body {
   font-weight: bold;
 }
 
+
 /* Efecto hover */
 .talla-select:hover {
-  border-color: #1e7e34;
+  border-color: #61AEBF ;
   box-shadow: 0 0 5px rgba(40, 167, 69, 0.4);
 }
 
 /* Cuando el select está enfocado */
 .talla-select:focus {
   outline: none;
-  border-color: #1e7e34;
+  border-color: #61AEBF ;
   box-shadow: 0 0 6px rgba(40, 167, 69, 0.6);
 }
 
@@ -235,11 +287,60 @@ body {
   height: 28px;
   border-radius: 50%;
   font-size: 1rem;
-  background: #085766;
+  background: #61AEBF ;
   color: white;
   cursor: pointer;
   border: none;
 }
+
+
+/*Boton talla*/
+.btn-talla {
+  background: #61AEBF; /* Degradado verde */
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*Botone modal*/
+.menos-talla, 
+.mas-talla {
+  background-color: #61AEBF;
+  color: black;
+
+}
+
+.menos-talla:hover, 
+.mas-talla:hover {
+  background: #61AEBF;
+  border-color: #999;
+}
+
+.menos-talla:active, 
+.mas-talla:active {
+  background: #61AEBF;
+  transform: scale(0.95);
+}
+
+.cantidad-talla {
+  display: inline-block;
+  min-width: 32px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 8px;
+  color: #333;
+}
+
+
 
 /* Footer */
 .cart-footer {
@@ -256,7 +357,7 @@ body {
 }
 
 .cart-footer .pay {
-  background: #085766 ;
+  background: #61AEBF  ;
   color: white;
   border: none;
   padding: 10px 20px;

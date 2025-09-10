@@ -14,12 +14,10 @@
     <h2>MENÚ</h2>
   </div>
 
-
   <!-- BARRA DE ANUNCIOS -->
   <div class="anuncio-bar">
     <p>
       Por la compra superior de 10 camisas llevalas a precio mayorista ✨  
-      
     </p>
   </div>
 
@@ -46,7 +44,56 @@
       <img src="./img/camisa-con-bolsillo.png" />
       <!-- <span>Camisa con bolsillo</span> -->
     </button>
+    <button class="categoria-btn" onclick="filtrarBotonCategoria(this, '')">
+      <img src="./img/camisa-numeral.png" />
+      <!-- <span>Camisa con bolsillo</span> -->
+    </button>
+    <button class="categoria-btn" onclick="filtrarBotonCategoria(this, '')">
+      <img src="./img/jeans.png" />
+      <!-- <span>Camisa con bolsillo</span> -->
+    </button>
   </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <h3>Selecciona tus tallas</h3>
+
+      <div class="talla-control" data-talla="S">
+        <span>S</span>
+        <button class="menos-talla">−</button>
+        <span class="cantidad-talla">0</span>
+        <button class="mas-talla">+</button>
+      </div>
+
+      <div class="talla-control" data-talla="M">
+        <span>M</span>
+        <button class="menos-talla">−</button>
+        <span class="cantidad-talla">0</span>
+        <button class="mas-talla">+</button>
+      </div>
+
+      <div class="talla-control" data-talla="L">
+        <span>L</span>
+        <button class="menos-talla">−</button>
+        <span class="cantidad-talla">0</span>
+        <button class="mas-talla">+</button>
+      </div>
+
+      <div class="talla-control" data-talla="XL">
+        <span>XL</span>
+        <button class="menos-talla">−</button>
+        <span class="cantidad-talla">0</span>
+        <button class="mas-talla">+</button>
+      </div>
+
+      <button class="close-btn" id="closeModal">Cerrar</button>
+    </div>
+  </div>
+
+
+
+
 
   <!-- Productos dinámicos -->
   <div class="cart-items"></div>

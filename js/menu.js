@@ -1,10 +1,10 @@
 const productos = [
   // camisa 
-
   {
     categoria: 'camisa',
     nombre: 'Camisa Beige Niño',
     precio: 52000,
+    precioMayorista: 40000, // 👈 agregado
     descripcion: 'Camisa casual de color beige para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/camisa-beige.jpeg'
   },
@@ -13,14 +13,16 @@ const productos = [
     categoria: 'camisa-lineas',
     nombre: 'Camisa Blanca con Líneas Negras Niño',
     precio: 52000,
+    precioMayorista: 40000, // 👈 agregado
     descripcion: 'Camisa blanca con estampado de líneas negras para niño, perfecta para un estilo moderno y fresco.',
     imagen: 'img/productos/camisa-blanca-lineas-negras.jpeg'
   },
-  
+
   {
     categoria: 'camisa',
     nombre: 'Camisa Blanca Niño',
     precio: 52000,
+    precioMayorista: 40000, // 👈 agregado
     descripcion: 'Camisa elegante de color blanco para niño, ideal para ocasiones formales y casuales.',
     imagen: 'img/productos/camisa-blanca.jpeg'
   },
@@ -29,17 +31,29 @@ const productos = [
     categoria: 'camisa-cuadros',
     nombre: 'Camisa Café a Cuadros Niño',
     precio: 52000,
+    precioMayorista: 40000, // 👈 agregado
     descripcion: 'Camisa a cuadros en tonos café para niño, perfecta para un look relajado.',
     imagen: 'img/productos/camisa-cafe.jpeg'
+  },
+
+  {
+    categoria: 'camisa-cuadros',
+    nombre: 'Camisa Verde Niño',
+    precio: 52000,
+    precioMayorista: 40000, // 👈 agregado
+    descripcion: 'Camisa de color verde para niño, cómoda y versátil para cualquier ocasión.',
+    imagen: 'img/productos/camisa-verde.jpeg'
   },
 
   {
     categoria: 'camisa',
     nombre: 'Camisa Verde Niño',
     precio: 52000,
+    precioMayorista: 40000, // 👈 agregado
     descripcion: 'Camisa de color verde para niño, cómoda y versátil para cualquier ocasión.',
     imagen: 'img/productos/camisa-verde.jpeg'
   }
+
 
   // {
   //   categoria: 'camisa',
@@ -75,14 +89,14 @@ const productos = [
   
 ];
 
-
 // =============================
 // Productos
 // =============================
 let productosFiltrados = [...productos];
 
-// Carrito: clave = índice del producto, valor = { cantidad, talla }
+// Carrito: clave = índice del producto, valor = { tallas: { "M": 5, "L": 2, ... } }
 let carrito = {};
+let productoSeleccionado = null; // índice del producto actual al abrir modal
 
 // =============================
 // Formateador a pesos colombianos
@@ -101,15 +115,16 @@ if (carritoGuardado) {
   carrito = JSON.parse(carritoGuardado);
 }
 
-const pedidoGuardado = sessionStorage.getItem('pedido');
-if (pedidoGuardado) {
-  const pedido = JSON.parse(pedidoGuardado);
-  pedido.resumen.forEach(item => {
-    const index = productos.findIndex(p => p.nombre === item.nombre);
-    if (index !== -1) {
-      carrito[index] = { cantidad: item.cantidad, talla: item.talla || "M" };
-    }
-  });
+// =============================
+// Validar si aplica mayorista
+// =============================
+function aplicaMayorista() {
+  let totalProductos = 0;
+  for (const i in carrito) {
+    const tallas = carrito[i]?.tallas || {};
+    totalProductos += Object.values(tallas).reduce((a, b) => a + b, 0);
+  }
+  return totalProductos >= 5;
 }
 
 // =============================
@@ -119,10 +134,21 @@ function renderCarrito() {
   const contenedor = document.querySelector('.cart-items');
   contenedor.innerHTML = '';
 
+  const esMayorista = aplicaMayorista();
+
   productosFiltrados.forEach((producto) => {
     const index = productos.indexOf(producto);
-    const cantidad = carrito[index]?.cantidad || 0;
-    const talla = carrito[index]?.talla || "M";
+
+    const tallas = carrito[index]?.tallas || {};
+    const totalCantidad = Object.values(tallas).reduce((a, b) => a + b, 0);
+
+    // Mostrar tallas seleccionadas en texto
+    const tallasTexto = Object.entries(tallas)
+      .map(([t, c]) => `${c} ${t}`)
+      .join(", ") || "Ninguna";
+
+    // precio según condición
+    const precioUnitario = esMayorista && producto.precioMayorista ? producto.precioMayorista : producto.precio;
 
     const item = document.createElement('div');
     item.className = 'cart-item';
@@ -132,21 +158,13 @@ function renderCarrito() {
         <h3>${producto.nombre}</h3>
         <p>${producto.descripcion}</p>
 
-        <!-- Selector de tallas -->
-        <label class="label-talla" for="talla_${index}">Talla:</label>
-        <select id="talla_${index}" class="talla-select" data-id="${index}">
-          <option value="S" ${talla === "S" ? "selected" : ""}>S</option>
-          <option value="M" ${talla === "M" ? "selected" : ""}>M</option>
-          <option value="L" ${talla === "L" ? "selected" : ""}>L</option>
-          <option value="XL" ${talla === "XL" ? "selected" : ""}>XL</option>
-        </select>
+        <button class="btn-talla" data-id="${index}">Escoger tallas</button>
+        <p class="talla-seleccionada">Tallas: ${tallasTexto}</p>
 
         <div class="bottom">
-          <span>${formatoCOP.format(producto.precio)}</span>
+          <span>${formatoCOP.format(precioUnitario)}</span>
           <div class="qty">
-            <button class="menos" data-id="${index}">−</button>
-            <span id="cant_${index}">${cantidad}</span>
-            <button class="mas" data-id="${index}">+</button>
+            <span>Total: ${totalCantidad}</span>
           </div>
         </div>
       </div>
@@ -154,37 +172,14 @@ function renderCarrito() {
     contenedor.appendChild(item);
   });
 
-  // Asignar eventos a los botones
-  document.querySelectorAll('.mas').forEach(btn => {
-    btn.addEventListener('click', () => cambiarCantidad(parseInt(btn.dataset.id), 1));
-  });
-
-  document.querySelectorAll('.menos').forEach(btn => {
-    btn.addEventListener('click', () => cambiarCantidad(parseInt(btn.dataset.id), -1));
-  });
-
-  // Asignar eventos a los selects de talla
-  document.querySelectorAll('.talla-select').forEach(select => {
-    select.addEventListener('change', () => {
-      const index = parseInt(select.dataset.id, 10);
-      if (!carrito[index]) carrito[index] = { cantidad: 0, talla: "M" };
-      carrito[index].talla = select.value;
-      actualizarTotal();
+  // Evento para abrir modal
+  document.querySelectorAll('.btn-talla').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const index = parseInt(btn.dataset.id, 10);
+      cargarTallasEnModal(index);
+      modalOverlay.style.display = 'flex';
     });
   });
-
-  actualizarTotal();
-}
-
-// =============================
-// Cambiar cantidad
-// =============================
-function cambiarCantidad(index, delta) {
-  if (!carrito[index]) carrito[index] = { cantidad: 0, talla: "M" };
-
-  carrito[index].cantidad = Math.max(0, (carrito[index].cantidad || 0) + delta);
-
-  document.getElementById(`cant_${index}`).textContent = carrito[index].cantidad;
 
   actualizarTotal();
 }
@@ -194,11 +189,18 @@ function cambiarCantidad(index, delta) {
 // =============================
 function actualizarTotal() {
   let total = 0;
+  const esMayorista = aplicaMayorista();
+
   for (const i in carrito) {
     const index = parseInt(i, 10);
-    const item = carrito[i];
-    if (productos[index] && item.cantidad > 0) {
-      total += productos[index].precio * item.cantidad;
+    const producto = productos[index];
+    const tallas = carrito[i].tallas;
+
+    const precioUnitario = esMayorista && producto.precioMayorista ? producto.precioMayorista : producto.precio;
+
+    for (const t in tallas) {
+      const cantidad = tallas[t];
+      total += precioUnitario * cantidad;
     }
   }
 
@@ -210,6 +212,89 @@ function actualizarTotal() {
   // Guardar carrito en sessionStorage
   sessionStorage.setItem('carrito', JSON.stringify(carrito));
 }
+
+// =============================
+// Modal de Tallas (único, compartido)
+// =============================
+const modalOverlay = document.getElementById('modalOverlay');
+const closeModal = document.getElementById('closeModal');
+
+closeModal.addEventListener('click', () => {
+  modalOverlay.style.display = 'none';
+});
+modalOverlay.addEventListener('click', (e) => {
+  if (e.target === modalOverlay) {
+    modalOverlay.style.display = 'none';
+  }
+});
+
+// Cargar tallas en modal (rellenar cantidades guardadas y asignar eventos)
+function cargarTallasEnModal(index) {
+  productoSeleccionado = index; // guardamos el producto activo
+  if (!carrito[index]) carrito[index] = { tallas: {} };
+
+  document.querySelectorAll('.talla-control').forEach(control => {
+    const talla = control.dataset.talla;
+    const cantidad = carrito[index].tallas[talla] || 0;
+    control.querySelector('.cantidad-talla').textContent = cantidad;
+
+    const btnMas = control.querySelector('.mas-talla');
+    const btnMenos = control.querySelector('.menos-talla');
+
+    // reasignar cada vez que se abre el modal
+    btnMas.onclick = () => {
+      carrito[index].tallas[talla] = (carrito[index].tallas[talla] || 0) + 1;
+      control.querySelector('.cantidad-talla').textContent = carrito[index].tallas[talla];
+      actualizarTotal();
+      renderCarrito();
+    };
+
+    btnMenos.onclick = () => {
+      carrito[index].tallas[talla] = Math.max(0, (carrito[index].tallas[talla] || 0) - 1);
+      control.querySelector('.cantidad-talla').textContent = carrito[index].tallas[talla];
+      actualizarTotal();
+      renderCarrito();
+    };
+  });
+}
+
+// =============================
+// Evento de Realizar Pedido
+// =============================
+document.querySelector('.pay').addEventListener('click', () => {
+  const resumen = [];
+  let total = 0;
+  const esMayorista = aplicaMayorista();
+
+  for (const i in carrito) {
+    const index = parseInt(i, 10);
+    const producto = productos[index];
+    const tallas = carrito[i].tallas;
+
+    const precioUnitario = esMayorista && producto.precioMayorista ? producto.precioMayorista : producto.precio;
+
+    for (const t in tallas) {
+      const cantidad = tallas[t];
+      if (cantidad > 0) {
+        const subtotal = precioUnitario * cantidad;
+        resumen.push({
+          nombre: producto.nombre,
+          talla: t,
+          cantidad,
+          subtotal
+        });
+        total += subtotal;
+      }
+    }
+  }
+
+  const pedido = { resumen, total };
+
+  localStorage.setItem('pedido', JSON.stringify(pedido));
+  sessionStorage.setItem('pedido', JSON.stringify(pedido));
+
+  window.location.href = 'customer.html';
+});
 
 // =============================
 // Filtro de categorías
@@ -225,42 +310,6 @@ function filtrarCategoria(categoria) {
   productosFiltrados = productos.filter(producto => producto.categoria === categoria);
   renderCarrito();
 }
-
-// =============================
-// Evento de Realizar Pedido
-// =============================
-document.querySelector('.pay').addEventListener('click', () => {
-  const resumen = [];
-  let total = 0;
-
-  for (const i in carrito) {
-    const index = parseInt(i, 10);
-    const producto = productos[index];
-    const item = carrito[i];
-
-    if (producto && item.cantidad > 0) {
-      const subtotal = producto.precio * item.cantidad;
-
-      resumen.push({
-        nombre: producto.nombre,
-        cantidad: item.cantidad,
-        talla: item.talla,   // 👈 ahora incluimos la talla
-        subtotal
-      });
-
-      total += subtotal;
-    }
-  }
-
-  const pedido = { resumen, total };
-
-  // Guardar en localStorage y sessionStorage
-  localStorage.setItem('pedido', JSON.stringify(pedido));
-  sessionStorage.setItem('pedido', JSON.stringify(pedido));
-
-  // No limpiamos el carrito para que siga al volver atrás
-  window.location.href = 'customer.html';
-});
 
 // =============================
 // Inicialización al cargar
@@ -282,3 +331,5 @@ if (categoriaGuardada) {
   productosFiltrados = [...productos];
   renderCarrito();
 }
+
+
