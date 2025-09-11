@@ -25,7 +25,7 @@ body {
 .offers-header .back-button {
   background: none;
   border: none;
-  color: green;
+  color: #4A9EA1;
   font-size: 1.5rem;
   margin-right: 16px;
   cursor: pointer;
@@ -98,16 +98,16 @@ body {
   height: 28px;
   border-radius: 50%;
   font-size: 1rem;
-  background: green;
+  background: #4A9EA1;
   color: white;
   cursor: pointer;
-  border: 2px solid green;
+  border: 2px solid #4A9EA1;
   font-weight: bold;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 .qty button:hover {
-  background: green;
+  background: #4A9EA1;
   color: white;
 }
 

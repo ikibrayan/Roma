@@ -39,7 +39,7 @@ body {
 
 /*Anuncios*/
 .anuncio-bar {
-  background-color: #61AEBF ;  /* color de fondo */
+  background-color: #4A9EA1 ;  /* color de fondo */
   color: white;               /* color de texto */
   padding: 5px 10px;
   font-size: 0.9em;
@@ -175,7 +175,7 @@ body {
 
 /* Activo */
 .categoria-btn.active {
-  background-color: #61AEBF ;
+  background-color: #4A9EA1 ;
  
   box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
   transform: scale(1.05);
@@ -243,7 +243,7 @@ body {
 .talla-select {
   padding: 6px 10px;
   margin-top: 6px;
-  border: 2px solid #61AEBF ;   /* verde similar al botón de + */
+  border: 2px solid #4A9EA1 ;   /* verde similar al botón de + */
   border-radius: 8px;
   background-color: #fff;
   font-size: 14px;
@@ -260,14 +260,14 @@ body {
 
 /* Efecto hover */
 .talla-select:hover {
-  border-color: #61AEBF ;
+  border-color: #4A9EA1 ;
   box-shadow: 0 0 5px rgba(40, 167, 69, 0.4);
 }
 
 /* Cuando el select está enfocado */
 .talla-select:focus {
   outline: none;
-  border-color: #61AEBF ;
+  border-color: #4A9EA1 ;
   box-shadow: 0 0 6px rgba(40, 167, 69, 0.6);
 }
 
@@ -276,27 +276,10 @@ body {
   font-weight: bold;
 }
 
-.qty {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.qty button {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  font-size: 1rem;
-  background: #61AEBF ;
-  color: white;
-  cursor: pointer;
-  border: none;
-}
-
 
 /*Boton talla*/
 .btn-talla {
-  background: #61AEBF; /* Degradado verde */
+  background: #4A9EA1; /* Degradado verde */
   color: #fff;
   font-weight: bold;
   width: 80%;
@@ -315,20 +298,20 @@ body {
 /*Botone modal*/
 .menos-talla, 
 .mas-talla {
-  background-color: #61AEBF;
+  background-color: #4A9EA1;
   color: black;
 
 }
 
 .menos-talla:hover, 
 .mas-talla:hover {
-  background: #61AEBF;
+  background: #4A9EA1;
   border-color: #999;
 }
 
 .menos-talla:active, 
 .mas-talla:active {
-  background: #61AEBF;
+  background: #4A9EA1;
   transform: scale(0.95);
 }
 
@@ -342,6 +325,10 @@ body {
   color: #333;
 }
 
+.talla-seleccionada{
+  display: block;
+  margin: 0 auto;
+}
 
 
 /* Footer */
@@ -359,7 +346,7 @@ body {
 }
 
 .cart-footer .pay {
-  background: #61AEBF  ;
+  background: #4A9EA1  ;
   color: white;
   border: none;
   padding: 10px 20px;

@@ -14,7 +14,7 @@ const productos = [
     nombre: 'Camisa Blanca con Líneas Negras Niño',
     precio: 52000,
     precioMayorista: 40000, // 👈 agregado
-    descripcion: 'Camisa blanca con estampado de líneas negras para niño, perfecta para un estilo moderno y fresco.',
+    descripcion: 'Camisa blanca con estampado de líneas negras para niño.',
     imagen: 'img/productos/camisa-blanca-lineas-negras.jpeg'
   },
 
@@ -23,7 +23,7 @@ const productos = [
     nombre: 'Camisa Blanca Niño',
     precio: 52000,
     precioMayorista: 40000, // 👈 agregado
-    descripcion: 'Camisa elegante de color blanco para niño, ideal para ocasiones formales y casuales.',
+    descripcion: 'Camisa elegante de color blanco para niño, ideal para ocasiones casuales.',
     imagen: 'img/productos/camisa-blanca.jpeg'
   },
 

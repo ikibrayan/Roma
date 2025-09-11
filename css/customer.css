@@ -24,7 +24,7 @@ body {
 .cart-header .back-button {
   background: none;
   border: none;
-  color: #085766;
+  color: #4A9EA1;
   font-size: 1.5rem;
   margin-right: 16px;
   cursor: pointer;
@@ -138,7 +138,7 @@ select option {
 
 .formulario button.enviar {
   margin-top: 20px;
-  background: #085766;
+  background: #4A9EA1;
   color: white;
   border: none;
   padding: 12px;
