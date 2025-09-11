@@ -125,6 +125,16 @@ h3{
   resize: vertical;
 }
 
+/* Estilo para el placeholder del select */
+select:invalid {
+  color: #888; /* gris placeholder */
+}
+
+/* Cuando el usuario ya elige algo */
+select option {
+  color: #333; /* texto normal */
+}
+
 
 .formulario button.enviar {
   margin-top: 20px;
