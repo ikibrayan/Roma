@@ -36,12 +36,14 @@
       <textarea id="observaciones" placeholder="Observaciones (opcional)" maxlength="200"></textarea>
 
 
-      <select id="entrega">
+      <select id="entrega" required>
+        <option value="" disabled selected>Selecciona entrega:</option>
         <option>Domicilio</option>
         <option>Recoger</option>
       </select>
 
       <select id="pago">
+        <option value="" disabled selected>Selecciona metodo de pago:</option>
         <option>Pago nequi/daviplata</option>
         <option>Contra entrega</option>
       </select>
