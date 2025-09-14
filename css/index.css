@@ -62,7 +62,7 @@
   .boton {
     padding: 15px 30px;
     font-size: 1.2em;
-    background-color: #4A9EA1 ;
+    background-color: #EECA4B ;
     color: white;
     border: none;
     border-radius: 30px;
@@ -72,7 +72,7 @@
   }
 
   .boton:hover {
-    background-color: green;
+    background-color: #EECA4B;
   }
 
   footer {

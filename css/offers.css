@@ -25,7 +25,7 @@ body {
 .offers-header .back-button {
   background: none;
   border: none;
-  color: #4A9EA1;
+  color: #EECA4B;
   font-size: 1.5rem;
   margin-right: 16px;
   cursor: pointer;
@@ -98,10 +98,10 @@ body {
   height: 28px;
   border-radius: 50%;
   font-size: 1rem;
-  background: #4A9EA1;
+  background: #EECA4B;
   color: white;
   cursor: pointer;
-  border: 2px solid #4A9EA1;
+  border: 2px solid #EECA4B;
   font-weight: bold;
   transition: background 0.3s ease, color 0.3s ease;
 }

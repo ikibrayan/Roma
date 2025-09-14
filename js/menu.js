@@ -1,59 +1,264 @@
 const productos = [
-  // camisa 
+  // camisa jean
   {
-    categoria: 'camisa',
-    nombre: 'Camisa Beige Niño',
-    precio: 52000,
-    precioMayorista: 40000, // 👈 agregado
-    descripcion: 'Camisa casual de color beige para niño, ideal para uso diario o eventos informales.',
-    imagen: 'img/productos/camisa-beige.jpeg'
+    categoria: 'camisa jean',
+    nombre: 'Camisa Jean Niño',
+    precio: 58000 ,
+    precioMayorista: 30000, // 👈 agregado
+    descripcion: 'Camisa de jean casual para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/camisa-jean/camisa-jean-1.webp'
   },
 
   {
-    categoria: 'camisa-lineas',
-    nombre: 'Camisa Blanca con Líneas Negras Niño',
-    precio: 52000,
-    precioMayorista: 40000, // 👈 agregado
-    descripcion: 'Camisa blanca con estampado de líneas negras para niño.',
-    imagen: 'img/productos/camisa-blanca-lineas-negras.jpeg'
+    categoria: 'camisa jean',
+    nombre: 'Camisa Jean Niño',
+    precio: 58000 ,
+    precioMayorista: 30000, // 👈 agregado
+    descripcion: 'Camisa de jean casual para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/camisa-jean/camisa-jean-2.webp'
   },
 
   {
-    categoria: 'camisa',
-    nombre: 'Camisa Blanca Niño',
-    precio: 52000,
-    precioMayorista: 40000, // 👈 agregado
-    descripcion: 'Camisa elegante de color blanco para niño, ideal para ocasiones casuales.',
-    imagen: 'img/productos/camisa-blanca.jpeg'
+    categoria: 'camisa jean',
+    nombre: 'Camisa Jean Niño',
+    precio: 58000 ,
+    precioMayorista: 30000, // 👈 agregado
+    descripcion: 'Camisa de jean casual para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/camisa-jean/camisa-jean-3.webp'
   },
 
   {
-    categoria: 'camisa-cuadros',
-    nombre: 'Camisa Café a Cuadros Niño',
-    precio: 52000,
+    categoria: 'camisa jean',
+    nombre: 'Camisa Jean Niño',
+    precio: 58000 ,
+    precioMayorista: 30000, // 👈 agregado
+    descripcion: 'Camisa de jean casual para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/camisa-jean/camisa-jean-4.webp'
+  },
+
+  //jeans
+
+  {
+    categoria: 'jean',
+    nombre: 'Cargo para niño',
+    precio: 62000 ,
     precioMayorista: 40000, // 👈 agregado
-    descripcion: 'Camisa a cuadros en tonos café para niño, perfecta para un look relajado.',
-    imagen: 'img/productos/camisa-cafe.jpeg'
+    descripcion: 'Cargo casual para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/jeans/jean-1.webp'
   },
 
   {
-    categoria: 'camisa-cuadros',
-    nombre: 'Camisa Verde Niño',
-    precio: 52000,
+    categoria: 'jean',
+    nombre: 'Cargo para niño',
+    precio: 62000 ,
     precioMayorista: 40000, // 👈 agregado
-    descripcion: 'Camisa de color verde para niño, cómoda y versátil para cualquier ocasión.',
-    imagen: 'img/productos/camisa-verde.jpeg'
+    descripcion: 'Cargo casual para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/jeans/jean-2.webp'
   },
 
   {
-    categoria: 'camisa',
-    nombre: 'Camisa Verde Niño',
-    precio: 52000,
-    precioMayorista: 40000, // 👈 agregado
-    descripcion: 'Camisa de color verde para niño, cómoda y versátil para cualquier ocasión.',
-    imagen: 'img/productos/camisa-verde.jpeg'
-  }
+    categoria: 'jean',
+    nombre: 'Jean para niño',
+    precio: 55000 ,
+    precioMayorista: 38000, // 👈 agregado
+    descripcion: 'Jean casual para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/jeans/jean-3.webp'
+  },
 
+  {
+    categoria: 'jean',
+    nombre: 'Jean para niño',
+    precio: 55000 ,
+    precioMayorista: 38000, // 👈 agregado
+    descripcion: 'Jean casual para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/jeans/jean-4.webp'
+  },
+
+  {
+    categoria: 'jean',
+    nombre: 'Jean para niño',
+    precio: 55000 ,
+    precioMayorista: 38000, // 👈 agregado
+    descripcion: 'Jean casual para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/jeans/jean-5.webp'
+  },
+
+  {
+    categoria: 'jean',
+    nombre: 'Jean para niño',
+    precio: 55000 ,
+    precioMayorista: 38000, // 👈 agregado
+    descripcion: 'Jean casual para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/jeans/jean-6.webp'
+  },
+
+  {
+    categoria: 'jean',
+    nombre: 'Cargo para niño',
+    precio: 62000 ,
+    precioMayorista: 40000, // 👈 agregado
+    descripcion: 'Cargo casual para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/jeans/jean-7.webp'
+  },
+   
+  //Leñador
+
+  {
+    categoria: 'leñador',
+    nombre: 'Camisa leñador para niño',
+    precio: 55000,
+    precioMayorista: 26000, // 👈 agregado
+    descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/leñador/leñador-1.webp'
+  },
+
+  {
+    categoria: 'leñador',
+    nombre: 'Camisa leñador para niño',
+    precio: 55000,
+    precioMayorista: 26000, // 👈 agregado
+    descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/leñador/leñador-2.webp'
+  },
+
+  {
+    categoria: 'leñador',
+    nombre: 'Camisa leñador para niño',
+    precio: 55000,
+    precioMayorista: 26000, // 👈 agregado
+    descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/leñador/leñador-3.webp'
+  },
+
+  {
+    categoria: 'leñador',
+    nombre: 'Camisa leñador para niño',
+    precio: 55000,
+    precioMayorista: 26000, // 👈 agregado
+    descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/leñador/leñador-4.webp'
+  },
+
+  {
+    categoria: 'leñador',
+    nombre: 'Camisa leñador para niño',
+    precio: 55000,
+    precioMayorista: 26000, // 👈 agregado
+    descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/leñador/leñador-5.webp'
+  },
+
+  {
+    categoria: 'leñador',
+    nombre: 'Camisa leñador para niño',
+    precio: 55000,
+    precioMayorista: 26000, // 👈 agregado
+    descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/leñador/leñador-6.webp'
+  },
+
+  {
+    categoria: 'leñador',
+    nombre: 'Camisa leñador para niño',
+    precio: 55000,
+    precioMayorista: 26000, // 👈 agregado
+    descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/leñador/leñador-7.webp'
+  },
+
+  {
+    categoria: 'leñador',
+    nombre: 'Camisa leñador para niño',
+    precio: 55000,
+    precioMayorista: 26000, // 👈 agregado
+    descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/leñador/leñador-8.webp'
+  },
+
+  {
+    categoria: 'leñador',
+    nombre: 'Camisa leñador para niño',
+    precio: 55000,
+    precioMayorista: 26000, // 👈 agregado
+    descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/leñador/leñador-9.webp'
+  },
+
+  //Pana
+
+  {
+    categoria: 'pana',
+    nombre: 'Camisa para niño',
+    precio: 58000,
+    precioMayorista: 30000, // 👈 agregado
+    descripcion: 'Camisa para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/pana/pana-1.webp'
+  },
+
+  {
+    categoria: 'pana',
+    nombre: 'Camisa para niño',
+    precio: 58000,
+    precioMayorista: 30000, // 👈 agregado
+    descripcion: 'Camisa para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/pana/pana-2.webp'
+  },
+
+  {
+    categoria: 'pana',
+    nombre: 'Camisa para niño',
+    precio: 58000,
+    precioMayorista: 30000, // 👈 agregado
+    descripcion: 'Camisa para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/pana/pana-3.webp'
+  },
+
+  {
+    categoria: 'pana',
+    nombre: 'Camisa para niño',
+    precio: 58000,
+    precioMayorista: 30000, // 👈 agregado
+    descripcion: 'Camisa para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/pana/pana-4.webp'
+  },
+
+  //unicolor
+
+  {
+    categoria: 'unicolor',
+    nombre: 'Camisa unicolor para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa unicolor para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/unicolor/unicolor-1.webp'
+  },
+
+  {
+    categoria: 'unicolor',
+    nombre: 'Camisa unicolor para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa unicolor para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/unicolor/unicolor-2.webp'
+  },
+
+  {
+    categoria: 'unicolor',
+    nombre: 'Camisa unicolor para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa unicolor para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/unicolor/unicolor-3.webp'
+  },
+
+  {
+    categoria: 'unicolor',
+    nombre: 'Camisa unicolor para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa unicolor para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/unicolor/unicolor-4.webp'
+  },
 
   // {
   //   categoria: 'camisa',
