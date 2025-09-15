@@ -39,8 +39,8 @@ body {
 
 /*Anuncios*/
 .anuncio-bar {
-  background-color: #EECA4B ;  /* color de fondo */
-  color: white;               /* color de texto */
+  background-color: black ;  /* color de fondo */
+  color: #EECA4B;               /* color de texto */
   padding: 5px 10px;
   font-size: 0.9em;
   overflow: hidden;
@@ -142,8 +142,8 @@ body {
   align-items: center;
   justify-content: center;
   border: none;
-  color: black;
-  background-color: #F5f5f5;
+  color: white;
+  background-color: black;
   border-radius: 16px;
   padding: 8px 12px;
   min-width: 80px;
@@ -163,7 +163,7 @@ body {
 .categoria-btn span {
   font-size: 13px;
   font-weight: 600;
-  color: black;
+  color: white;
   text-align: center;
 }
 
