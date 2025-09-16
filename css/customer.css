@@ -139,7 +139,7 @@ select option {
 .formulario button.enviar {
   margin-top: 20px;
   background: #EECA4B;
-  color: white;
+  color: black;
   border: none;
   padding: 12px;
   font-weight: bold;

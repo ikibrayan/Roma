@@ -289,7 +289,113 @@ const productos = [
     imagen: 'img/productos/textura/textura-3.webp'
   },
 
+  {
+    categoria: 'textura',
+    nombre: 'Camisa de textura para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/textura/textura-4.webp'
+  },
 
+  {
+    categoria: 'textura',
+    nombre: 'Camisa de textura para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/textura/textura-5.webp'
+  },
+
+  {
+    categoria: 'textura',
+    nombre: 'Camisa de textura para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/textura/textura-6.webp'
+  },
+
+  {
+    categoria: 'textura',
+    nombre: 'Camisa de textura para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/textura/textura-7.webp'
+  },
+
+  {
+    categoria: 'textura',
+    nombre: 'Camisa de textura para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/textura/textura-8.webp'
+  },
+
+  {
+    categoria: 'textura',
+    nombre: 'Camisa de textura para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/textura/textura-9.webp'
+  },
+
+  {
+    categoria: 'textura',
+    nombre: 'Camisa de textura para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/textura/textura-10.webp'
+  },
+
+  {
+    categoria: 'textura',
+    nombre: 'Camisa de textura para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/textura/textura-11.webp'
+  },
+
+  {
+    categoria: 'textura',
+    nombre: 'Camisa de textura para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/textura/textura-12.webp'
+  },
+
+  {
+    categoria: 'textura',
+    nombre: 'Camisa de textura para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/textura/textura-13.webp'
+  },
+
+  {
+    categoria: 'textura',
+    nombre: 'Camisa de textura para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/textura/textura-14.webp'
+  },
+
+  {
+    categoria: 'textura',
+    nombre: 'Camisa de textura para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/textura/textura-15.webp'
+  },
   // {
   //   categoria: 'camisa',
   //   nombre: 'Blusa Blanca Mujer',
@@ -327,6 +433,9 @@ const productos = [
 // =============================
 // Productos
 // =============================
+// =============================
+// Productos
+// =============================
 let productosFiltrados = [...productos];
 
 // Carrito: clave = índice del producto, valor = { tallas: { "M": 5, "L": 2, ... } }
@@ -351,15 +460,12 @@ if (carritoGuardado) {
 }
 
 // =============================
-// Validar si aplica mayorista
+// Validar si aplica mayorista por producto
 // =============================
-function aplicaMayorista() {
-  let totalProductos = 0;
-  for (const i in carrito) {
-    const tallas = carrito[i]?.tallas || {};
-    totalProductos += Object.values(tallas).reduce((a, b) => a + b, 0);
-  }
-  return totalProductos >= 6;
+function aplicaMayoristaPorProducto(index) {
+  const tallas = carrito[index]?.tallas || {};
+  const totalProducto = Object.values(tallas).reduce((a, b) => a + b, 0);
+  return totalProducto >= 6;
 }
 
 // =============================
@@ -368,8 +474,6 @@ function aplicaMayorista() {
 function renderCarrito() {
   const contenedor = document.querySelector('.cart-items');
   contenedor.innerHTML = '';
-
-  const esMayorista = aplicaMayorista();
 
   productosFiltrados.forEach((producto) => {
     const index = productos.indexOf(producto);
@@ -383,7 +487,9 @@ function renderCarrito() {
       .join(", ") || "Ninguna";
 
     // precio según condición
-    const precioUnitario = esMayorista && producto.precioMayorista ? producto.precioMayorista : producto.precio;
+    const precioUnitario = aplicaMayoristaPorProducto(index) && producto.precioMayorista
+      ? producto.precioMayorista
+      : producto.precio;
 
     const item = document.createElement('div');
     item.className = 'cart-item';
@@ -424,14 +530,15 @@ function renderCarrito() {
 // =============================
 function actualizarTotal() {
   let total = 0;
-  const esMayorista = aplicaMayorista();
 
   for (const i in carrito) {
     const index = parseInt(i, 10);
     const producto = productos[index];
     const tallas = carrito[i].tallas;
 
-    const precioUnitario = esMayorista && producto.precioMayorista ? producto.precioMayorista : producto.precio;
+    const precioUnitario = aplicaMayoristaPorProducto(index) && producto.precioMayorista
+      ? producto.precioMayorista
+      : producto.precio;
 
     for (const t in tallas) {
       const cantidad = tallas[t];
@@ -499,14 +606,15 @@ function cargarTallasEnModal(index) {
 document.querySelector('.pay').addEventListener('click', () => {
   const resumen = [];
   let total = 0;
-  const esMayorista = aplicaMayorista();
 
   for (const i in carrito) {
     const index = parseInt(i, 10);
     const producto = productos[index];
     const tallas = carrito[i].tallas;
 
-    const precioUnitario = esMayorista && producto.precioMayorista ? producto.precioMayorista : producto.precio;
+    const precioUnitario = aplicaMayoristaPorProducto(index) && producto.precioMayorista
+      ? producto.precioMayorista
+      : producto.precio;
 
     for (const t in tallas) {
       const cantidad = tallas[t];
@@ -566,5 +674,6 @@ if (categoriaGuardada) {
   productosFiltrados = [...productos];
   renderCarrito();
 }
+
 
 
