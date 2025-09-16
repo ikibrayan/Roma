@@ -279,7 +279,7 @@ body {
 /*Boton talla*/
 .btn-talla {
   background: #EECA4B; /* Degradado verde */
-  color: #fff;
+  color: black;
   font-weight: bold;
   width: 80%;
   padding: 6px 6px;
