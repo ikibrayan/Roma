@@ -40,7 +40,7 @@ body {
 /*Anuncios*/
 .anuncio-bar {
   background-color: #EECA4B ;  /* color de fondo */
-  color: white;               /* color de texto */
+  color: black;               /* color de texto */
   padding: 5px 10px;
   font-size: 0.9em;
   overflow: hidden;

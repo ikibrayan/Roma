@@ -260,6 +260,36 @@ const productos = [
     imagen: 'img/productos/unicolor/unicolor-4.webp'
   },
 
+  //textura
+
+  {
+    categoria: 'textura',
+    nombre: 'Camisa de textura para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/textura/textura-1.webp'
+  },
+
+  {
+    categoria: 'textura',
+    nombre: 'Camisa de textura para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/textura/textura-2.webp'
+  },
+
+  {
+    categoria: 'textura',
+    nombre: 'Camisa de textura para niño',
+    precio: 52000,
+    precioMayorista: 25000, // 👈 agregado
+    descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
+    imagen: 'img/productos/textura/textura-3.webp'
+  },
+
+
   // {
   //   categoria: 'camisa',
   //   nombre: 'Blusa Blanca Mujer',
@@ -329,7 +359,7 @@ function aplicaMayorista() {
     const tallas = carrito[i]?.tallas || {};
     totalProductos += Object.values(tallas).reduce((a, b) => a + b, 0);
   }
-  return totalProductos >= 5;
+  return totalProductos >= 6;
 }
 
 // =============================
