@@ -460,12 +460,22 @@ if (carritoGuardado) {
 }
 
 // =============================
-// Validar si aplica mayorista por producto
+// Validar si aplica mayorista por categoría
 // =============================
-function aplicaMayoristaPorProducto(index) {
-  const tallas = carrito[index]?.tallas || {};
-  const totalProducto = Object.values(tallas).reduce((a, b) => a + b, 0);
-  return totalProducto >= 6;
+function aplicaMayoristaPorCategoria(categoria) {
+  let totalCategoria = 0;
+
+  for (const i in carrito) {
+    const index = parseInt(i, 10);
+    const producto = productos[index];
+
+    if (producto.categoria === categoria) {
+      const tallas = carrito[i].tallas;
+      totalCategoria += Object.values(tallas).reduce((a, b) => a + b, 0);
+    }
+  }
+
+  return totalCategoria >= 6;
 }
 
 // =============================
@@ -487,7 +497,7 @@ function renderCarrito() {
       .join(", ") || "Ninguna";
 
     // precio según condición
-    const precioUnitario = aplicaMayoristaPorProducto(index) && producto.precioMayorista
+    const precioUnitario = aplicaMayoristaPorCategoria(producto.categoria) && producto.precioMayorista
       ? producto.precioMayorista
       : producto.precio;
 
@@ -536,7 +546,7 @@ function actualizarTotal() {
     const producto = productos[index];
     const tallas = carrito[i].tallas;
 
-    const precioUnitario = aplicaMayoristaPorProducto(index) && producto.precioMayorista
+    const precioUnitario = aplicaMayoristaPorCategoria(producto.categoria) && producto.precioMayorista
       ? producto.precioMayorista
       : producto.precio;
 
@@ -612,7 +622,7 @@ document.querySelector('.pay').addEventListener('click', () => {
     const producto = productos[index];
     const tallas = carrito[i].tallas;
 
-    const precioUnitario = aplicaMayoristaPorProducto(index) && producto.precioMayorista
+    const precioUnitario = aplicaMayoristaPorCategoria(producto.categoria) && producto.precioMayorista
       ? producto.precioMayorista
       : producto.precio;
 
