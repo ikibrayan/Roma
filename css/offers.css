@@ -86,36 +86,6 @@ body {
   font-size: 1rem;
 }
 
-/* Cantidad (+ y -) */
-.qty {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.qty button {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  font-size: 1rem;
-  background: #EECA4B;
-  color: white;
-  cursor: pointer;
-  border: 2px solid #EECA4B;
-  font-weight: bold;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.qty button:hover {
-  background: #4A9EA1;
-  color: white;
-}
-
-.qty span {
-  min-width: 20px;
-  text-align: center;
-  font-weight: bold;
-}
 
 /* Footer fijo */
 .cart-footer {
@@ -126,7 +96,7 @@ body {
   background: #F5f5f5;
   color: black;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 14px 20px;
   z-index: 100;
@@ -139,8 +109,8 @@ body {
 }
 
 .cart-footer .pay {
-  background: black;
-  color: white;
+  background: #EECA4B;
+  color: black;
   border: none;
   padding: 10px 16px;
   border-radius: 8px;
