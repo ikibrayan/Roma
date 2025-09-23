@@ -1,7 +1,7 @@
 // offers.js (mínimo)
 
 // Número de WhatsApp con indicativo de Colombia (+57)
-const WHATSAPP_NUMBER = '573001706295';
+const WHATSAPP_NUMBER = '573155799915';
 
 function abrirWhatsApp(mensaje) {
   const url = new URL('https://api.whatsapp.com/send');
