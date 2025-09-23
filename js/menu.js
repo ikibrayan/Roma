@@ -265,7 +265,7 @@ const productos = [
   {
     categoria: 'textura',
     nombre: 'Camisa de textura para niño',
-    precio: 52000,
+    precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/textura/textura-1.webp'
@@ -274,7 +274,7 @@ const productos = [
   {
     categoria: 'textura',
     nombre: 'Camisa de textura para niño',
-    precio: 52000,
+    precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/textura/textura-2.webp'
@@ -283,7 +283,7 @@ const productos = [
   {
     categoria: 'textura',
     nombre: 'Camisa de textura para niño',
-    precio: 52000,
+    precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/textura/textura-3.webp'
@@ -292,7 +292,7 @@ const productos = [
   {
     categoria: 'textura',
     nombre: 'Camisa de textura para niño',
-    precio: 52000,
+    precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/textura/textura-4.webp'
@@ -301,7 +301,7 @@ const productos = [
   {
     categoria: 'textura',
     nombre: 'Camisa de textura para niño',
-    precio: 52000,
+    precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/textura/textura-5.webp'
@@ -310,7 +310,7 @@ const productos = [
   {
     categoria: 'textura',
     nombre: 'Camisa de textura para niño',
-    precio: 52000,
+    precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/textura/textura-6.webp'
@@ -319,7 +319,7 @@ const productos = [
   {
     categoria: 'textura',
     nombre: 'Camisa de textura para niño',
-    precio: 52000,
+    precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/textura/textura-7.webp'
@@ -328,7 +328,7 @@ const productos = [
   {
     categoria: 'textura',
     nombre: 'Camisa de textura para niño',
-    precio: 52000,
+    precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/textura/textura-8.webp'
@@ -337,7 +337,7 @@ const productos = [
   {
     categoria: 'textura',
     nombre: 'Camisa de textura para niño',
-    precio: 52000,
+    precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/textura/textura-9.webp'
@@ -346,7 +346,7 @@ const productos = [
   {
     categoria: 'textura',
     nombre: 'Camisa de textura para niño',
-    precio: 52000,
+    precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/textura/textura-10.webp'
@@ -355,7 +355,7 @@ const productos = [
   {
     categoria: 'textura',
     nombre: 'Camisa de textura para niño',
-    precio: 52000,
+    precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/textura/textura-11.webp'
@@ -364,7 +364,7 @@ const productos = [
   {
     categoria: 'textura',
     nombre: 'Camisa de textura para niño',
-    precio: 52000,
+    precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/textura/textura-12.webp'
@@ -373,7 +373,7 @@ const productos = [
   {
     categoria: 'textura',
     nombre: 'Camisa de textura para niño',
-    precio: 52000,
+    precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/textura/textura-13.webp'
@@ -382,7 +382,7 @@ const productos = [
   {
     categoria: 'textura',
     nombre: 'Camisa de textura para niño',
-    precio: 52000,
+    precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/textura/textura-14.webp'
@@ -391,7 +391,7 @@ const productos = [
   {
     categoria: 'textura',
     nombre: 'Camisa de textura para niño',
-    precio: 52000,
+    precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
     imagen: 'img/productos/textura/textura-15.webp'
