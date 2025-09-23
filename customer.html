@@ -16,6 +16,7 @@
   </div>
 
   <!-- WRAPPER -->
+   <!-- WRAPPER -->
   <main class="form-wrapper">
     
     <!-- LOGO -->
@@ -30,11 +31,29 @@
     <div class="formulario">
       <input type="text" id="nombre" placeholder="Tu nombre" required maxlength="60">
       <input type="text" id="direccion" placeholder="Dirección de entrega" required maxlength="30">
+
+      <!-- 🔹 Nuevo campo ciudad -->
+      <select id="ciudad" required>
+        <option value="" disabled selected>Selecciona ciudad de destino:</option>
+        <option value="Bogotá">Bogotá</option>
+        <option value="Medellín">Medellín</option>
+        <option value="Cali">Cali</option>
+        <option value="Barranquilla">Barranquilla</option>
+        <option value="Cartagena">Cartagena</option>
+        <option value="Bucaramanga">Bucaramanga</option>
+        <option value="Pereira">Pereira</option>
+        <option value="Manizales">Manizales</option>
+        <option value="Santa Marta">Santa Marta</option>
+        <option value="Cúcuta">Cúcuta</option>
+      </select>
+
+      <!-- 🔹 Mensaje dinámico -->
+      <p id="mensaje-envio" style="color:red; font-weight:bold; display:none; margin:8px 0;"></p>
+
       <input type="tel" id="telefono" placeholder="Número de contacto" required>
 
-       <!-- 🔹 Nuevo campo de observaciones -->
+      <!-- 🔹 Nuevo campo de observaciones -->
       <textarea id="observaciones" placeholder="Observaciones (opcional)" maxlength="200"></textarea>
-
 
       <select id="entrega" required>
         <option value="" disabled selected>Selecciona entrega:</option>
@@ -77,6 +96,21 @@
         window.location.href = referrer;
       } else {
         window.location.href = "menu.html"; // fallback
+      }
+    });
+  </script>
+
+  <script>
+    const ciudadSelect = document.getElementById("ciudad");
+    const mensajeEnvio = document.getElementById("mensaje-envio");
+
+    ciudadSelect.addEventListener("change", function () {
+      const ciudad = this.value;
+      if (ciudad && ciudad !== "Bogotá") {
+        mensajeEnvio.textContent = `Para la ciudad de ${ciudad}, el valor del envío es $15,000 COP.`;
+        mensajeEnvio.style.display = "block";
+      } else {
+        mensajeEnvio.style.display = "none";
       }
     });
   </script>
