@@ -2,7 +2,7 @@ const productos = [
   // camisa jean
   {
     categoria: 'camisa jean',
-    nombre: 'Camisa Jean Niño',
+    nombre: 'Camisa Jean Niño (1)',
     precio: 58000 ,
     precioMayorista: 30000, // 👈 agregado
     descripcion: 'Camisa de jean casual para niño, ideal para uso diario o eventos informales.',
@@ -10,7 +10,7 @@ const productos = [
   },
 
   {
-    categoria: 'camisa jean',
+    categoria: 'camisa jean (2)',
     nombre: 'Camisa Jean Niño',
     precio: 58000 ,
     precioMayorista: 30000, // 👈 agregado
@@ -19,7 +19,7 @@ const productos = [
   },
 
   {
-    categoria: 'camisa jean',
+    categoria: 'camisa jean (3)',
     nombre: 'Camisa Jean Niño',
     precio: 58000 ,
     precioMayorista: 30000, // 👈 agregado
@@ -28,7 +28,7 @@ const productos = [
   },
 
   {
-    categoria: 'camisa jean',
+    categoria: 'camisa jean (4)',
     nombre: 'Camisa Jean Niño',
     precio: 58000 ,
     precioMayorista: 30000, // 👈 agregado
@@ -40,7 +40,7 @@ const productos = [
 
   {
     categoria: 'jean',
-    nombre: 'Cargo para niño',
+    nombre: 'Cargo para niño (1)',
     precio: 62000 ,
     precioMayorista: 40000, // 👈 agregado
     descripcion: 'Cargo casual para niño, ideal para uso diario o eventos informales.',
@@ -49,7 +49,7 @@ const productos = [
 
   {
     categoria: 'jean',
-    nombre: 'Cargo para niño',
+    nombre: 'Cargo para niño (2)',
     precio: 62000 ,
     precioMayorista: 40000, // 👈 agregado
     descripcion: 'Cargo casual para niño, ideal para uso diario o eventos informales.',
@@ -58,7 +58,7 @@ const productos = [
 
   {
     categoria: 'jean',
-    nombre: 'Jean para niño',
+    nombre: 'Jean para niño (1)',
     precio: 55000 ,
     precioMayorista: 38000, // 👈 agregado
     descripcion: 'Jean casual para niño, ideal para uso diario o eventos informales.',
@@ -67,7 +67,7 @@ const productos = [
 
   {
     categoria: 'jean',
-    nombre: 'Jean para niño',
+    nombre: 'Jean para niño (2)',
     precio: 55000 ,
     precioMayorista: 38000, // 👈 agregado
     descripcion: 'Jean casual para niño, ideal para uso diario o eventos informales.',
@@ -76,7 +76,7 @@ const productos = [
 
   {
     categoria: 'jean',
-    nombre: 'Jean para niño',
+    nombre: 'Jean para niño (3)',
     precio: 55000 ,
     precioMayorista: 38000, // 👈 agregado
     descripcion: 'Jean casual para niño, ideal para uso diario o eventos informales.',
@@ -85,7 +85,7 @@ const productos = [
 
   {
     categoria: 'jean',
-    nombre: 'Jean para niño',
+    nombre: 'Jean para niño (4)',
     precio: 55000 ,
     precioMayorista: 38000, // 👈 agregado
     descripcion: 'Jean casual para niño, ideal para uso diario o eventos informales.',
@@ -94,7 +94,7 @@ const productos = [
 
   {
     categoria: 'jean',
-    nombre: 'Cargo para niño',
+    nombre: 'Cargo para niño (3)',
     precio: 62000 ,
     precioMayorista: 40000, // 👈 agregado
     descripcion: 'Cargo casual para niño, ideal para uso diario o eventos informales.',
@@ -105,7 +105,7 @@ const productos = [
 
   {
     categoria: 'leñador',
-    nombre: 'Camisa leñador para niño',
+    nombre: 'Camisa leñador para niño (1)',
     precio: 55000,
     precioMayorista: 26000, // 👈 agregado
     descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
@@ -114,7 +114,7 @@ const productos = [
 
   {
     categoria: 'leñador',
-    nombre: 'Camisa leñador para niño',
+    nombre: 'Camisa leñador para niño (2)',
     precio: 55000,
     precioMayorista: 26000, // 👈 agregado
     descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
@@ -123,7 +123,7 @@ const productos = [
 
   {
     categoria: 'leñador',
-    nombre: 'Camisa leñador para niño',
+    nombre: 'Camisa leñador para niño (3)',
     precio: 55000,
     precioMayorista: 26000, // 👈 agregado
     descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
@@ -132,7 +132,7 @@ const productos = [
 
   {
     categoria: 'leñador',
-    nombre: 'Camisa leñador para niño',
+    nombre: 'Camisa leñador para niño (4)',
     precio: 55000,
     precioMayorista: 26000, // 👈 agregado
     descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
@@ -141,7 +141,7 @@ const productos = [
 
   {
     categoria: 'leñador',
-    nombre: 'Camisa leñador para niño',
+    nombre: 'Camisa leñador para niño (5)',
     precio: 55000,
     precioMayorista: 26000, // 👈 agregado
     descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
@@ -150,7 +150,7 @@ const productos = [
 
   {
     categoria: 'leñador',
-    nombre: 'Camisa leñador para niño',
+    nombre: 'Camisa leñador para niño (6)',
     precio: 55000,
     precioMayorista: 26000, // 👈 agregado
     descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
@@ -159,7 +159,7 @@ const productos = [
 
   {
     categoria: 'leñador',
-    nombre: 'Camisa leñador para niño',
+    nombre: 'Camisa leñador para niño (7)',
     precio: 55000,
     precioMayorista: 26000, // 👈 agregado
     descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
@@ -168,7 +168,7 @@ const productos = [
 
   {
     categoria: 'leñador',
-    nombre: 'Camisa leñador para niño',
+    nombre: 'Camisa leñador para niño (8)',
     precio: 55000,
     precioMayorista: 26000, // 👈 agregado
     descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
@@ -177,7 +177,7 @@ const productos = [
 
   {
     categoria: 'leñador',
-    nombre: 'Camisa leñador para niño',
+    nombre: 'Camisa leñador para niño (9)',
     precio: 55000,
     precioMayorista: 26000, // 👈 agregado
     descripcion: 'Camisa leñador para niño, ideal para uso diario o eventos informales.',
@@ -188,7 +188,7 @@ const productos = [
 
   {
     categoria: 'pana',
-    nombre: 'Camisa para niño',
+    nombre: 'Camisa para niño (1)',
     precio: 58000,
     precioMayorista: 30000, // 👈 agregado
     descripcion: 'Camisa para niño, ideal para uso diario o eventos informales.',
@@ -197,7 +197,7 @@ const productos = [
 
   {
     categoria: 'pana',
-    nombre: 'Camisa para niño',
+    nombre: 'Camisa para niño (2)',
     precio: 58000,
     precioMayorista: 30000, // 👈 agregado
     descripcion: 'Camisa para niño, ideal para uso diario o eventos informales.',
@@ -206,7 +206,7 @@ const productos = [
 
   {
     categoria: 'pana',
-    nombre: 'Camisa para niño',
+    nombre: 'Camisa para niño (3)',
     precio: 58000,
     precioMayorista: 30000, // 👈 agregado
     descripcion: 'Camisa para niño, ideal para uso diario o eventos informales.',
@@ -215,7 +215,7 @@ const productos = [
 
   {
     categoria: 'pana',
-    nombre: 'Camisa para niño',
+    nombre: 'Camisa para niño (4)',
     precio: 58000,
     precioMayorista: 30000, // 👈 agregado
     descripcion: 'Camisa para niño, ideal para uso diario o eventos informales.',
@@ -226,7 +226,7 @@ const productos = [
 
   {
     categoria: 'unicolor',
-    nombre: 'Camisa unicolor para niño',
+    nombre: 'Camisa unicolor para niño (1)',
     precio: 52000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa unicolor para niño, ideal para uso diario o eventos informales.',
@@ -235,7 +235,7 @@ const productos = [
 
   {
     categoria: 'unicolor',
-    nombre: 'Camisa unicolor para niño',
+    nombre: 'Camisa unicolor para niño (2)',
     precio: 52000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa unicolor para niño, ideal para uso diario o eventos informales.',
@@ -244,7 +244,7 @@ const productos = [
 
   {
     categoria: 'unicolor',
-    nombre: 'Camisa unicolor para niño',
+    nombre: 'Camisa unicolor para niño (3)',
     precio: 52000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa unicolor para niño, ideal para uso diario o eventos informales.',
@@ -253,7 +253,7 @@ const productos = [
 
   {
     categoria: 'unicolor',
-    nombre: 'Camisa unicolor para niño',
+    nombre: 'Camisa unicolor para niño (4)',
     precio: 52000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa unicolor para niño, ideal para uso diario o eventos informales.',
@@ -264,7 +264,7 @@ const productos = [
 
   {
     categoria: 'textura',
-    nombre: 'Camisa de textura para niño',
+    nombre: 'Camisa de textura para niño (1)',
     precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
@@ -273,7 +273,7 @@ const productos = [
 
   {
     categoria: 'textura',
-    nombre: 'Camisa de textura para niño',
+    nombre: 'Camisa de textura para niño (2)',
     precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
@@ -282,7 +282,7 @@ const productos = [
 
   {
     categoria: 'textura',
-    nombre: 'Camisa de textura para niño',
+    nombre: 'Camisa de textura para niño (3)',
     precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
@@ -291,7 +291,7 @@ const productos = [
 
   {
     categoria: 'textura',
-    nombre: 'Camisa de textura para niño',
+    nombre: 'Camisa de textura para niño (4)',
     precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
@@ -300,7 +300,7 @@ const productos = [
 
   {
     categoria: 'textura',
-    nombre: 'Camisa de textura para niño',
+    nombre: 'Camisa de textura para niño (5)',
     precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
@@ -309,7 +309,7 @@ const productos = [
 
   {
     categoria: 'textura',
-    nombre: 'Camisa de textura para niño',
+    nombre: 'Camisa de textura para niño (6)',
     precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
@@ -318,7 +318,7 @@ const productos = [
 
   {
     categoria: 'textura',
-    nombre: 'Camisa de textura para niño',
+    nombre: 'Camisa de textura para niño (7)',
     precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
@@ -327,7 +327,7 @@ const productos = [
 
   {
     categoria: 'textura',
-    nombre: 'Camisa de textura para niño',
+    nombre: 'Camisa de textura para niño (8)',
     precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
@@ -336,7 +336,7 @@ const productos = [
 
   {
     categoria: 'textura',
-    nombre: 'Camisa de textura para niño',
+    nombre: 'Camisa de textura para niño (9)',
     precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
@@ -345,7 +345,7 @@ const productos = [
 
   {
     categoria: 'textura',
-    nombre: 'Camisa de textura para niño',
+    nombre: 'Camisa de textura para niño (10)',
     precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
@@ -354,7 +354,7 @@ const productos = [
 
   {
     categoria: 'textura',
-    nombre: 'Camisa de textura para niño',
+    nombre: 'Camisa de textura para niño (11)',
     precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
@@ -363,7 +363,7 @@ const productos = [
 
   {
     categoria: 'textura',
-    nombre: 'Camisa de textura para niño',
+    nombre: 'Camisa de textura para niño (12)',
     precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
@@ -372,7 +372,7 @@ const productos = [
 
   {
     categoria: 'textura',
-    nombre: 'Camisa de textura para niño',
+    nombre: 'Camisa de textura para niño (13)',
     precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
@@ -381,7 +381,7 @@ const productos = [
 
   {
     categoria: 'textura',
-    nombre: 'Camisa de textura para niño',
+    nombre: 'Camisa de textura para niño (14)',
     precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
@@ -390,7 +390,7 @@ const productos = [
 
   {
     categoria: 'textura',
-    nombre: 'Camisa de textura para niño',
+    nombre: 'Camisa de textura para niño (15)',
     precio: 55000,
     precioMayorista: 25000, // 👈 agregado
     descripcion: 'Camisa de textura para niño, ideal para uso diario o eventos informales.',
