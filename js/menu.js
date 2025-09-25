@@ -10,8 +10,8 @@ const productos = [
   },
 
   {
-    categoria: 'camisa jean (2)',
-    nombre: 'Camisa Jean Niño',
+    categoria: 'camisa jean',
+    nombre: 'Camisa Jean Niño (2)',
     precio: 58000 ,
     precioMayorista: 30000, // 👈 agregado
     descripcion: 'Camisa de jean casual para niño, ideal para uso diario o eventos informales.',
@@ -19,8 +19,8 @@ const productos = [
   },
 
   {
-    categoria: 'camisa jean (3)',
-    nombre: 'Camisa Jean Niño',
+    categoria: 'camisa jean',
+    nombre: 'Camisa Jean Niño (3)',
     precio: 58000 ,
     precioMayorista: 30000, // 👈 agregado
     descripcion: 'Camisa de jean casual para niño, ideal para uso diario o eventos informales.',
@@ -28,8 +28,8 @@ const productos = [
   },
 
   {
-    categoria: 'camisa jean (4)',
-    nombre: 'Camisa Jean Niño',
+    categoria: 'camisa jean',
+    nombre: 'Camisa Jean Niño (4)',
     precio: 58000 ,
     precioMayorista: 30000, // 👈 agregado
     descripcion: 'Camisa de jean casual para niño, ideal para uso diario o eventos informales.',
